@@ -1,0 +1,31 @@
+:root {
+    --transition-blur: 0.5s ease
+}
+
+.cursor {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 100;
+    background: white;
+    position: absolute;
+    pointer-events: none;
+}
+
+.cursor--large {
+    --size: 28px;
+    border: 2px solid white;
+    mix-blend-mode: overlay;
+    max-height: 58px !important;
+}
+
+.cursor--small {
+    --size: 10px;
+    transform: translate(-50%, -50%);
+    //uncomment to make inner cursor inclusive
+    //mix-blend-mode:exclusion;
+}
