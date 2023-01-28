@@ -1,0 +1,6 @@
+<header>
+    <main>
+        <button name="navButton" *ngFor="let item of headers" [ngClass]="{active: item.active, disable: item.disable}"
+        (mouseenter)="onMouseEnter($event)" (mouseleave)="onMouseLeave()" (click)="selectionChanged($event, item.id)"> {{ item.display}} </button>
+    </main>
+</header>

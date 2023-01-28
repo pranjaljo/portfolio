@@ -1,21 +1,2 @@
-<!-- <header>
-    <main>
-        <button data-header="home" class="active" onmouseenter="blurBackground()" onmouseleave="unBlurBackground()"
-            onclick="location='#/1'">
-            <span class="nav-link">Home</span>
-        </button>
-        <button data-header="about-me-new" onmouseenter="blurBackground()" onmouseleave="unBlurBackground()"
-            onclick="location='#/2'">
-            <span class="nav-link">About me</span>
-        </button>
-        <button data-header="contact" onmouseenter="blurBackground()" onmouseleave="unBlurBackground()"
-            onclick="location='#/3'">
-            <span class="nav-link">Contact</span>
-        </button>
-        <button onmouseenter="blurBackground()" onmouseleave="unBlurBackground()">
-            <span class="nav-link">Resume</span>
-        </button>
-    </main>
-</header> -->
-
-<app-cursor></app-cursor>
+<app-header (headerAction)="headerAction($event)"></app-header>
+<app-cursor #customCursor></app-cursor>

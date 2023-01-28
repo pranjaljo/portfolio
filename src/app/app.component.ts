@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, ViewChild, ViewChildren } from '@angular/core';
+import { CursorComponent } from './cursor/cursor.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,14 @@ import { Component, ElementRef, HostListener, ViewChild, ViewChildren } from '@a
 })
 export class AppComponent {
 
+  @ViewChild('customCursor') customCursor : CursorComponent;
+
+  headerAction($event){
+    if($event){
+      this.customCursor.updateOuterCursorSize($event);
+    }
+    else {
+      this.customCursor.resetOuterCursorSize();
+    }
+  }
 }
